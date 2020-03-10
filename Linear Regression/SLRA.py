@@ -11,7 +11,7 @@ model = Sequential()
 model.add(Dense(1, input_dim=1, activation='linear'))
 sgd = optimizers.SGD(lr=0.01)
 model.compile(optimizer=sgd, loss='mse', metrics=['mse'])
-model.fit(X, Y, batch_size=1, epochs=30, shuffle=False)
+model.fit(X, Y, batch_size=1, epochs=100, shuffle=False)
 
 print(model.predict([9.5]))
 plt.plot(X, model.predict(X), 'b', X, Y, 'k.')
